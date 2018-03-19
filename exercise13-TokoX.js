@@ -1,8 +1,8 @@
 /*algorit
 
 -buat var arrObj untuk output yang akan dihasilkan
--gunakan for loop untuk melakukan iterasi antara parameter orang(Shoppers) dengan list barang untuk mengecek apakah barang yang dibeli terdapat pada list barang
-  --->jika produk yang ingin dibeli === list barang yang pada
+-gunakan for loop untuk melakukan iterasi antara parameter orang(shoppers) dengan list barang untuk mengecek apakah barang yang dibeli terdapat pada list barang
+  --->jika produk yang ingin dibeli === list barang yang ada
      ---->dan jika produk yang ingin dibeli <= jumlah barang yang ada
         ---->push orang.name ke arrObj
         

@@ -1,13 +1,15 @@
+
 function totalDigitRekursif(angka) {
   // you can only write your code here!
-  var pisah=angka.toString().split('');
+  var pisah=angka.toString();
+   
  
- 
-  if(count===pisah.length-1) {
-    return 0;
+  if(pisah.length===1) {
+    return Number(pisah);
   }else {
-    count=count+1; 
-    return Number(pisah[count]+totalDigitRekursif[angka]);
+    var awal=Number(pisah[0]);
+    pisah=pisah.slice(1); 
+    return awal + totalDigitRekursif(Number(pisah));
   }
 }
 
