@@ -11,8 +11,43 @@
         untuk totalProfit dapat dipisah per produk dengan membuat 3 variable profit.
         
 */        
-        
 
+//alternatif
+function countProfit(shoppers) {
+    
+    let listBarang = [
+        ['Sepatu Stacattu', 1500000, 10],
+        ['Baju Zoro', 500000, 2],
+        ['Sweater Uniklooh', 175000, 1]
+    ];
+    
+     // you can only write your code here!
+   var output=[]  
+   for(var i=0;i<listBarang.length;i++) {
+     var dataProduk={};
+     dataProduk.product=listBarang[i][0];
+     dataProduk.shoppers=[];
+     dataProduk.leftOver=listBarang[i][2];
+     dataProduk.totalProfit=0;
+     
+     for(var j=0;j<shoppers.length;j++) {
+       if(dataProduk.product===shoppers[j].product && dataProduk.leftOver>=shoppers[j].amount) {
+         dataProduk.shoppers.push(shoppers[j].name);
+         dataProduk.leftOver-=shoppers[j].amount;
+         dataProduk.totalProfit=dataProduk.totalProfit+ (listBarang[i][1]*shoppers[j].amount)
+       }
+     }
+     output.push(dataProduk);
+   }
+   if(shoppers.length===0) {
+     return []
+   }else {
+   return output;
+   }
+     
+}
+        
+/*
 function countProfit(orang) {
   let listBarang = [ ['Sepatu Stacattu', 1500000, 10],
                      ['Baju Zoro', 500000, 2],
@@ -69,6 +104,7 @@ function countProfit(orang) {
   }
     
 }
+*/
 
 // TEST CASES
 
